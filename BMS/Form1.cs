@@ -8,126 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BMS
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.BackColor= Color.White;
+            // TODO: This line of code loads data into the 'database1DataSet.duty_chart' table. You can move, or remove it, as needed.
+            this.duty_chartTableAdapter.Fill(this.database1DataSet.duty_chart);
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            var myForm = new Form2();
-            myForm.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void personnelDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void enterNewPersonnelDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var myForm = new Form2();
-            myForm.Show();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            var myForm = new Form4();
-            myForm.Show();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            string message = "Do you want to logout? ";
-            string title = "Confirmation";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-            if (result == DialogResult.No)
-            {
-
-            }
-            else if (result == DialogResult.Yes)
-            {
-                MessageBox.Show("You have been logged out ", "Logout succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            var myForm = new Form5();
-            myForm.Show();
+            
         }
     }
 }

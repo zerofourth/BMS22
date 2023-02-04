@@ -12,13 +12,14 @@ using System.Windows.Forms;
 namespace BMS
 {
 
-    public partial class Form3 : Form
+    public partial class login : Form
     {
-        public Form3()
+        public login()
         {
             InitializeComponent();
             label5.Visible = false;
             label6.Visible = false;
+            HelpButton = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,12 +65,14 @@ namespace BMS
             else{
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.activation);//Use your own filename in place of _15035
                 player.Play();
-                var myForm = new Form1();
-                myForm.Show();
+                this.Hide();
+                var newform = new home();
+                newform.Closed += (s, args) => this.Close();
+                newform.Show();
             }
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void login_Load(object sender, EventArgs e)
         {
 
         }

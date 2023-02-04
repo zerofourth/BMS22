@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BMS
 {
-    public partial class Form4 : Form
+    public partial class new_gdlog : Form
     {
-        public Form4()
+        public new_gdlog()
         {
             InitializeComponent();
         }
@@ -99,6 +99,16 @@ namespace BMS
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

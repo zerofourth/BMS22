@@ -1,6 +1,6 @@
 ﻿namespace BMS
 {
-    partial class Form2
+    partial class add_pd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_pd));
             this.firstname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +60,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.address_rtb = new System.Windows.Forms.RichTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -224,6 +229,7 @@
             this.trade.Name = "trade";
             this.trade.Size = new System.Drawing.Size(169, 24);
             this.trade.TabIndex = 17;
+            this.trade.SelectedIndexChanged += new System.EventHandler(this.trade_SelectedIndexChanged);
             // 
             // rank
             // 
@@ -242,6 +248,7 @@
             this.rank.Name = "rank";
             this.rank.Size = new System.Drawing.Size(164, 24);
             this.rank.TabIndex = 18;
+            this.rank.SelectedIndexChanged += new System.EventHandler(this.rank_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -274,6 +281,7 @@
             this.paygrade.Name = "paygrade";
             this.paygrade.Size = new System.Drawing.Size(91, 24);
             this.paygrade.TabIndex = 21;
+            this.paygrade.SelectedIndexChanged += new System.EventHandler(this.paygrade_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -315,6 +323,7 @@
             this.button1.Size = new System.Drawing.Size(161, 23);
             this.button1.TabIndex = 27;
             this.button1.Text = "Upload a photo";
+            this.toolTip1.SetToolTip(this.button1, "Upload your recent photo - should be PNG or JPEG/JPG");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -344,6 +353,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(161, 167);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -383,12 +393,30 @@
             this.address_rtb.Text = "New Town\nSample City\nDist. - Sample\nMadhya Pradesh - 9999\t";
             this.address_rtb.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // Form2
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup_1);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(612, 408);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(161, 23);
+            this.progressBar1.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.progressBar1, "Progress of the form");
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // add_pd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(819, 801);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.address_rtb);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label15);
@@ -419,9 +447,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstname);
-            this.Name = "Form2";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "add_pd";
             this.Text = "Add new personnel data";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.add_pd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -461,5 +490,8 @@
         private System.Windows.Forms.TextBox forceno;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox address_rtb;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

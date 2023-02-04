@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BMS
 {
-    public partial class Form5 : Form
+    public partial class calculators : Form
     {
-        public Form5()
+        public calculators()
         {
             InitializeComponent();
             label5.Visible = false;
@@ -85,6 +85,11 @@ namespace BMS
         private void button2_Click(object sender, EventArgs e)
         {
             retire();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
     

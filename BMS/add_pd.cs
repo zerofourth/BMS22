@@ -9,19 +9,20 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace BMS
 {
-    public partial class Form2 : Form
+    public partial class add_pd : Form
     {
-        public Form2()
+        public add_pd()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void add_pd_Load(object sender, EventArgs e)
         {
 
         }
@@ -38,7 +39,7 @@ namespace BMS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -111,37 +112,77 @@ namespace BMS
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+            this.progressBar1.Increment(1);
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
+            this.progressBar1.Increment(1);
+        }
 
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup_1(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 12;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
+        }
+
+        private void rank_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
+        }
+
+        private void trade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
+        }
+
+        private void paygrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
         }
     }
 }
